@@ -16,6 +16,10 @@ public class Curso {
 	@JoinColumn(name = "id_departamento", foreignKey = @ForeignKey(name = "fk_departamento_curso"))
 	private Departamento departamento;
 	
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "id_turma", foreignKey = @ForeignKey(name = "fk_turma_curso"))
+	private Turma turma;
+	
 
 	public String getNome() {
 		return nome;
@@ -36,5 +40,14 @@ public class Curso {
 	public Integer getId() {
 		return id;
 	}
+
+	public Turma getTurma() {
+		return turma;
+	}
+
+	public void setTurma(Turma turma) {
+		this.turma = turma;
+	}
+	
 	
 }

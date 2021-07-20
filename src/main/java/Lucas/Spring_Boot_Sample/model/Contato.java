@@ -6,7 +6,7 @@ import javax.persistence.*;
 public class Contato {
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
-	@Column(name = "id_contato")
+	@Column(name = "id")
 	private Integer id;
 	@Column(length = 11, nullable = true)
 	private Long telefone;

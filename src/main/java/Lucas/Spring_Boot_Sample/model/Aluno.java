@@ -18,19 +18,19 @@ public class Aluno {
 	@Column(length = 9, nullable = false)
 	private String rg;
 	
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "id_contato", foreignKey = @ForeignKey(name = "fk_contato_aluno"))
 	private Contato contato;
 	
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "id_endereco", foreignKey = @ForeignKey(name = "fk_endereco_aluno"))
 	private Endereco endereco;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "id_curso", foreignKey = @ForeignKey(name = "fk_curso_aluno"))
 	private Curso curso;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "id_turma", foreignKey = @ForeignKey(name = "fk_turma_aluno"))
 	private Turma turma;
 	

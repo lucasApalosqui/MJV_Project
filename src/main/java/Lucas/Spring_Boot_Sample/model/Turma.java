@@ -24,9 +24,9 @@ public class Turma {
 	@Column(name = "data_fim", nullable = true)
 	private LocalDate dataFim;
 	
-	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name = "id_turma", foreignKey = @ForeignKey(name = "fk_turma_curso"))
-	private List<Curso> curso;
+	/*@OneToMany(cascade = CascadeType.PERSIST)
+	@JoinColumn(name = "id_curso", foreignKey = @ForeignKey(name = "fk_turma_curso"))
+	private List<Curso> curso; */
 	
 	
 	public String getNome() {
@@ -59,12 +59,12 @@ public class Turma {
 	public void setDataFim(LocalDate dataFim) {
 		this.dataFim = dataFim;
 	}
-	public List<Curso> getCurso() {
+	/*public List<Curso> getCurso() {
 		return curso;
 	}
 	public void setCurso(List<Curso> curso) {
 		this.curso = curso;
-	}
+	} */
 	public Integer getId() {
 		return id;
 	}
